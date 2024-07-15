@@ -36,7 +36,9 @@ function ServiceBox({ service }: { service: Service }) {
         <Flex direction="column" className="p-4">
           <Collapsible.Trigger asChild>
             <Flex align="center" justify="between" className="cursor-pointer">
-              <Heading size="3">{service.name}</Heading>
+              <Heading className="text-[var(--accent-11)]" size="3">
+                {service.name}
+              </Heading>
               <ChevronDownIcon
                 className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
               />
