@@ -1,31 +1,56 @@
-import { Card, Flex, Text, Heading, Separator } from "@radix-ui/themes";
-import * as AspectRatio from "@radix-ui/react-aspect-ratio";
-import me from "@/assets/me.webp";
+import { Card, Flex, Text, Heading, Separator, Grid } from "@radix-ui/themes";
 
 export default function About() {
   return (
-    <Card className="mx-auto max-w-[400px]">
-      <AspectRatio.Root ratio={1}>
-        <img src={me} alt="Profile picture" className="h-full w-full object-cover" />
-      </AspectRatio.Root>
-
-      <Flex direction="column" gap="3" className="p-4">
-        <Heading as="h1" size="6">
-          Name
+    <Card className="mx-auto max-w-4xl">
+      <Flex direction="column" gap="6" className="p-8">
+        <Heading as="h2" size="8" className="text-center uppercase tracking-wide">
+          What Are We?
         </Heading>
 
         <Separator size="4" />
 
-        <Text className="text-left italic text-[var(--gray-11)]">
-          "The only way to do great work
-        </Text>
-        <Text className="text-right italic text-[var(--gray-11)]">is to love what you do"</Text>
+        <Grid columns={{ initial: "1", md: "2" }} gap="6">
+          <Flex direction="column" gap="4">
+            <Text as="p" size="5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum provident laboriosam
+              officiis quod dolorum laborum sapiente, dolor quas perspiciatis recusandae libero
+              soluta laudantium corrupti facilis consectetur fugit a quos iure
+            </Text>
+            <Text as="p" size="5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, molestias, dolores
+              vitae distinctio aut neque doloremque eligendi, eius ea tempore commodi delectus a.
+            </Text>
+          </Flex>
+        </Grid>
 
-        <Text as="p">
-          I'm a passionate developer with a keen interest in creating beautiful and functional web
-          applications. With experience in React and a love for clean code, I strive to make the web
-          a better place, one component at a time.
-        </Text>
+        <Separator size="4" />
+
+        <Flex direction="column" gap="4">
+          <Heading as="h3" size="6">
+            Our Core Values
+          </Heading>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>
+              <Text size="4">
+                Innovation: We constantly push the boundaries of what's possible.
+              </Text>
+            </li>
+            <li>
+              <Text size="4">Quality: We deliver excellence in every line of code.</Text>
+            </li>
+            <li>
+              <Text size="4">
+                Collaboration: We believe in the power of teamwork and open communication.
+              </Text>
+            </li>
+            <li>
+              <Text size="4">
+                Integrity: We operate with transparency and honesty in all our dealings.
+              </Text>
+            </li>
+          </ul>
+        </Flex>
       </Flex>
     </Card>
   );
