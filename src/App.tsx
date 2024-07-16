@@ -1,26 +1,8 @@
-import { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Theme } from "@radix-ui/themes";
 import { useAppearance } from "@/contexts/appearance";
-import { Welcome, About, Contact, Services, Footer } from "@/components";
-
-function ScrollToSection() {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.getElementById(hash.slice(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [hash]);
-
-  return null;
-}
+import { Welcome, About, Contact, Services, Footer, ScrollToSection } from "@/components";
 
 function MainContent() {
   return (
