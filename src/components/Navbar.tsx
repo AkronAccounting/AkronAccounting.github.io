@@ -5,24 +5,30 @@ import { useAppearance } from "@/contexts/appearance";
 export default function Navbar() {
   const { appearance } = useAppearance();
 
+  const containerStyles = "p-3 rounded-full bg-[var(--accent-2)] backdrop-blur-sm";
+  const iconButtonStyles =
+    "!cursor-pointer !transition-none hover:bg-transparent hover:opacity-100 [&>svg]:hover:stroke-current z-10";
+
+  const iconStyles = "w-8 h-8 sm:w-12 sm:h-12";
+
   return (
     <>
-      <div className="fixed left-0 top-0 z-10 m-3">
-        <IconButton variant="ghost" aria-label="Menu" className="!cursor-pointer">
-          <HamburgerMenuIcon width="48" height="48" />
+      <div className={`fixed left-0 top-0 z-10 m-2 sm:m-3 ${containerStyles}`}>
+        <IconButton variant="ghost" aria-label="Menu" className={iconButtonStyles}>
+          <HamburgerMenuIcon className={iconStyles} />
         </IconButton>
       </div>
 
-      <div className="fixed right-0 top-0 z-10 m-3">
+      <div className={`fixed right-0 top-0 z-10 m-2 sm:m-3 ${containerStyles}`}>
         <IconButton
           variant="ghost"
           aria-label={appearance === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-          className="!cursor-pointer"
+          className={iconButtonStyles}
         >
           {appearance === "light" ? (
-            <SunIcon width="48" height="48" />
+            <SunIcon className={iconStyles} />
           ) : (
-            <MoonIcon width="48" height="48" />
+            <MoonIcon className={iconStyles} />
           )}
         </IconButton>
       </div>
