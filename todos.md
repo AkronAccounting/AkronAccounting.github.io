@@ -17,6 +17,7 @@
 ## Medium Priority
 
 - [ ] Styling
+- [ ] When scrolling into view, the heading will type itself out
 
 ## Low Priority
 

@@ -88,8 +88,8 @@ export default function Services() {
 
   return (
     <Container className="mx-auto px-4 py-8">
-      <Heading size="8" className="mb-6">
-        Our Services
+      <Heading as="h2" size="8" className="text-center uppercase tracking-wide mb-6">
+        Our services
       </Heading>
       <Flex wrap="wrap" gap="4" justify="center" className="services-container">
         {services.map((service, idx) => (
