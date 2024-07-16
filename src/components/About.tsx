@@ -2,7 +2,7 @@ import { Container, Flex, Text, Heading, Separator } from "@radix-ui/themes";
 
 export default function About() {
   return (
-    <Container className="mx-auto px-4 py-8 text-left">
+    <Container className="mx-auto px-4 py-8 text-left" id="about">
       <Flex direction="column" gap="6" className="p-8">
         <Heading as="h2" size="8" className="text-center uppercase tracking-wide">
           What Are We?

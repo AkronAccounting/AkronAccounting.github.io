@@ -87,8 +87,8 @@ export default function Services() {
   };
 
   return (
-    <Container className="mx-auto px-4 py-8">
-      <Heading as="h2" size="8" className="text-center uppercase tracking-wide mb-8">
+    <Container className="mx-auto px-4 py-8" id="services">
+      <Heading as="h2" size="8" className="mb-8 text-center uppercase tracking-wide">
         Our services
       </Heading>
       <Flex wrap="wrap" gap="4" justify="center" className="services-container">

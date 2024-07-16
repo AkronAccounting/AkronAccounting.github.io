@@ -1,4 +1,5 @@
 import { Container, Flex, Text, Link } from "@radix-ui/themes";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,17 +9,17 @@ export default function Footer() {
       <Container size="3">
         <Flex direction="column" align="center" gap="4">
           <Flex wrap="wrap" gap="4" justify="center">
-            <Link href="/" className="text-[var(--accent-9-contrast)] hover:underline">
-              Home
+            <Link asChild className="text-[var(--accent-9-contrast)] hover:underline">
+              <RouterLink to="/">Home</RouterLink>
             </Link>
-            <Link href="/about" className="text-[var(--accent-9-contrast)] hover:underline">
-              About
+            <Link asChild className="text-[var(--accent-9-contrast)] hover:underline">
+              <RouterLink to="/#about">About</RouterLink>
             </Link>
-            <Link href="/services" className="text-[var(--accent-9-contrast)] hover:underline">
-              Services
+            <Link asChild className="text-[var(--accent-9-contrast)] hover:underline">
+              <RouterLink to="/#services">Services</RouterLink>
             </Link>
-            <Link href="/contact" className="text-[var(--accent-9-contrast)] hover:underline">
-              Contact
+            <Link asChild className="text-[var(--accent-9-contrast)] hover:underline">
+              <RouterLink to="/#contact">Contact</RouterLink>
             </Link>
           </Flex>
           <Text size="2" className="text-center">

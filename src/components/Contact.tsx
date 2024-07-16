@@ -36,7 +36,7 @@ function ContactButton({
 
 export default function Contact() {
   return (
-    <Container className="mx-auto px-4 py-8 pb-20">
+    <Container className="mx-auto px-4 py-8 pb-20" id="contact">
       <Heading as="h2" size="8" className="mb-8 text-center uppercase tracking-wide">
         Need more info?
       </Heading>
