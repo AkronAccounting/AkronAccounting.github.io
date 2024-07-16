@@ -3,6 +3,7 @@ import "./App.css";
 import { Theme } from "@radix-ui/themes";
 import { useAppearance } from "@/contexts/appearance";
 import { Welcome, About, Contact, Services, Footer, ScrollToSection } from "@/components";
+import Navbar from "./components/Navbar";
 
 function MainContent() {
   return (
@@ -21,6 +22,7 @@ function App() {
   return (
     <Theme accentColor="ruby" grayColor="slate" appearance={appearance}>
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/:section" element={<MainContent />} />
