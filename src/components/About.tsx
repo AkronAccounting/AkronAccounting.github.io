@@ -1,8 +1,8 @@
-import { Card, Flex, Text, Heading, Separator } from "@radix-ui/themes";
+import { Flex, Text, Heading, Separator } from "@radix-ui/themes";
 
 export default function About() {
   return (
-    <Card className="mx-auto max-w-4xl">
+    <div className="text-left">
       <Flex direction="column" gap="6" className="p-8">
         <Heading as="h2" size="8" className="text-center uppercase tracking-wide">
           What Are We?
@@ -56,6 +56,6 @@ export default function About() {
           </ul>
         </Flex>
       </Flex>
-    </Card>
+    </div>
   );
 }

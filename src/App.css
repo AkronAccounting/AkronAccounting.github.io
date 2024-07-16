@@ -3,36 +3,14 @@
   text-align: center;
 }
 
-/* Remove padding for the Welcome component */
-#root > *:first-child {
-  padding: 0;
-}
-
-/* Add padding back for other components */
-#root > *:not(:first-child) {
-  padding: 2rem;
-}
-
-@media (max-width: 390px) {
-  #root > *:not(:first-child) {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 350px) {
-  #root > *:not(:first-child) {
-    padding: 0;
-  }
-}
-
-.react-parallax {
+/* .react-parallax {
   width: 100%;
 }
 
-/* Ensure the Welcome component takes full viewport height */
 .react-parallax-content {
   min-height: 100vh;
-}
+} */
+
 .collapsible-content {
   overflow: hidden;
   transition: height 300ms ease-in-out;
