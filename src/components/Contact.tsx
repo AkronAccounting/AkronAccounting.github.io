@@ -33,8 +33,8 @@ function ContactButton({
 
 export default function Contact() {
   return (
-    <Container size="3" className="py-16">
-      <Heading as="h2" size="8" className="mb-6 text-center uppercase tracking-wide">
+    <Container className="mx-auto px-4 py-8 pb-20">
+      <Heading as="h2" size="8" className="mb-8 text-center uppercase tracking-wide">
         Need more info?
       </Heading>
       <Flex justify="center" gap="6" className="flex flex-col md:flex-row">
