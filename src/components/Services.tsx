@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, Heading, Text, Flex } from "@radix-ui/themes";
+import { Card, Heading, Text, Flex, Container } from "@radix-ui/themes";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
@@ -26,13 +26,14 @@ const services: Service[] = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolores.",
   },
 ];
+
 function ServiceBox({ service }: { service: Service }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Collapsible.Root open={isOpen} onOpenChange={setIsOpen}>
-      <Card className="w-64 overflow-hidden transition-all duration-300 ease-in-out">
-        <img src={service.image} alt={service.name} className="h-40 w-full object-cover" />
+      <Card className="w-[300px] transition-all duration-300 ease-in-out xs:w-[350px]">
+        <img src={service.image} alt={service.name} className="object-cover" />
         <Flex direction="column" className="p-4">
           <Collapsible.Trigger asChild>
             <Flex align="center" justify="between" className="cursor-pointer">
@@ -55,7 +56,7 @@ function ServiceBox({ service }: { service: Service }) {
 
 export default function Services() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <Container className="mx-auto px-4 py-8">
       <Heading size="8" className="mb-6">
         Our Services
       </Heading>
@@ -64,6 +65,6 @@ export default function Services() {
           <ServiceBox key={idx} service={service} />
         ))}
       </Flex>
-    </div>
+    </Container>
   );
 }

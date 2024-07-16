@@ -7,7 +7,7 @@ export default {
         darkModeGray: "#111113",
       },
       screens: {
-        xs: "320px",
+        xs: "400px",
       },
     },
   },
