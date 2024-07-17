@@ -11,12 +11,21 @@ const AppearanceContext = createContext<AppearanceContextType | undefined>(undef
 
 export const AppearanceProvider = ({ children }: { children: React.ReactNode }) => {
   const [appearance, setAppearance] = useState<"dark" | "light">(() => {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const appearance = localStorage.getItem("appearance");
+
+    if (!appearance) {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    return appearance as "light" | "dark";
   });
 
   useLayoutEffect(() => {
     function mediaListener(event: MediaQueryListEvent) {
-      setAppearance(event.matches ? "dark" : "light");
+      const appearance = event.matches ? "dark" : "light";
+      if (!localStorage.getItem("appearance")) {
+        setAppearance(appearance);
+      }
     }
     const media = window.matchMedia("(prefers-color-scheme: dark)");
     media.addEventListener("change", mediaListener);
@@ -24,7 +33,11 @@ export const AppearanceProvider = ({ children }: { children: React.ReactNode }) 
   }, []);
 
   function toggleAppearance() {
-    setAppearance((current) => (current === "dark" ? "light" : "dark"));
+    setAppearance((current) => {
+      const appearance = current === "dark" ? "light" : "dark";
+      localStorage.setItem("appearance", appearance);
+      return appearance;
+    });
   }
 
   return (
