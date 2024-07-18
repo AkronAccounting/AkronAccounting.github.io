@@ -12,6 +12,7 @@ import {
   ScrollToSection,
   Animator,
 } from "@/components";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 function MainContent() {
   return (
@@ -20,11 +21,9 @@ function MainContent() {
       <Animator>
         <About />
       </Animator>
-
       <Animator>
         <Services />
       </Animator>
-
       <Animator>
         <Contact />
       </Animator>
@@ -36,17 +35,19 @@ function App() {
   const { appearance } = useAppearance();
 
   return (
-    <Theme accentColor="ruby" grayColor="mauve" appearance={appearance}>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<MainContent />} />
-          <Route path="/:section" element={<MainContent />} />
-        </Routes>
-        <ScrollToSection />
-        <Footer />
-      </Router>
-    </Theme>
+    <ReactLenis root>
+      <Theme accentColor="ruby" grayColor="mauve" appearance={appearance}>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<MainContent />} />
+            <Route path="/:section" element={<MainContent />} />
+          </Routes>
+          <ScrollToSection />
+          <Footer />
+        </Router>
+      </Theme>
+    </ReactLenis>
   );
 }
 
