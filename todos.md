@@ -6,7 +6,6 @@
 
 ## High Priority
 
-- [ ] Have a small ball at the bottom so that users will click and it will go down
 - [ ] React lenis scrollbar
 
 ## Medium Priority
@@ -19,6 +18,7 @@
 
 ## Completed
 
+- [x] Have a small ball at the bottom so that users will click and it will go down
 - [x] Styling
 - [x] Setup initial project structure
 - [x] Radix UI for accessibility
