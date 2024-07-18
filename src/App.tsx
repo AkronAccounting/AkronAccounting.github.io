@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Theme } from "@radix-ui/themes";
 import { useAppearance } from "@/contexts/appearance";
 import {
