@@ -2,21 +2,15 @@
 
 ## Notes
 
-- Use mobile first development
 - https://framer.com/projects/Untitled--jt3Szjpe0R6vNNS9lvGK-idER8?welcome=1&node=bDVZHI66G
 
 ## High Priority
 
-- [ ] Radix UI for accessibility
-- [ ] Theming and generate accent colors
-- [ ] Implement basic sections - About, Services, Contact
-- [ ] Implement parallax
-- [ ] Add text and content
-- [ ] Media query
+- [ ] Have a small ball at the bottom so that users will click and it will go down
 
 ## Medium Priority
 
-- [ ] Styling
+- [x] Styling
 - [ ] When scrolling into view, the heading will type itself out
 
 ## Low Priority
@@ -26,3 +20,9 @@
 ## Completed
 
 - [x] Setup initial project structure
+- [x] Radix UI for accessibility
+- [x] Theming and generate accent colors
+- [x] Implement basic sections - About, Services, Contact
+- [x] Implement parallax
+- [x] Add text and content
+- [x] Media query

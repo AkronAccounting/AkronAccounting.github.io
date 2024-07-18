@@ -20,7 +20,7 @@ function App() {
   const { appearance } = useAppearance();
 
   return (
-    <Theme accentColor="ruby" grayColor="slate" appearance={appearance}>
+    <Theme accentColor="ruby" grayColor="mauve" appearance={appearance}>
       <Router>
         <Navbar />
         <Routes>

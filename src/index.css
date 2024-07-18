@@ -16,3 +16,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root,
+.light,
+.light-theme,
+.radix-themes {
+  --color-background: var(--accent-2);
+}
+
+.dark,
+.dark-theme,
+:is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
+  --color-background: #111;
+}

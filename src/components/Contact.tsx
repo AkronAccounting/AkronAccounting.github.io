@@ -6,25 +6,27 @@ function ContactButton({
   text,
   subtext,
   link,
+  iconClasses,
 }: {
   icon: React.ReactNode;
   text: string;
   subtext: string;
   link: string;
+  iconClasses?: string;
 }) {
   return (
     <Link href={link} rel="noopener noreferrer" role="button" className="no-underline">
       <Button
         size="4"
-        className="!cursor-pointer !py-8 shadow-[0_0_0_0_var(--accent-a8)] transition-shadow !duration-300 ease-in-out hover:shadow-[0_0px_8px_8px_var(--accent-a6)]"
+        className="!w-[264px] !cursor-pointer !justify-start !py-10 shadow-[0_0_0_0_var(--accent-a8)] transition-shadow !duration-300 ease-in-out hover:shadow-[0_0px_8px_8px_var(--accent-a6)]"
       >
-        <Flex align="center" justify="center" gap="5">
-          <div>{icon}</div>
+        <Flex align="center" justify="start" gap="5">
+          <div className={iconClasses}>{icon}</div>
           <Flex direction="column">
-            <Text size="5" weight="bold">
+            <Text size="5" weight="bold" className="text-left !leading-5">
               {text}
             </Text>
-            <Text size="3" color="gray">
+            <Text size="3" className="text-left !leading-5 opacity-75">
               {subtext}
             </Text>
           </Flex>
@@ -42,16 +44,17 @@ export default function Contact() {
       </Heading>
       <Flex align="center" justify="center" gap="6" className="flex flex-col md:flex-row">
         <ContactButton
-          icon={<EnvelopeClosedIcon width="24" height="24" />}
+          icon={<EnvelopeClosedIcon width="40" height="40" />}
           text="Email Us"
           subtext="hello@example.com"
           link="mailto:hello@example.com"
         />
         <ContactButton
-          icon={<MobileIcon width="24" height="24" />}
+          icon={<MobileIcon width="40" height="40" />}
           text="Call Us"
           subtext="+61 123 456 789"
           link="tel:+61123456789"
+          iconClasses="mr-[-10px]"
         />
       </Flex>
     </Container>

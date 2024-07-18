@@ -9,7 +9,7 @@ export default function Navbar() {
   const iconButtonStyles =
     "!cursor-pointer !transition-none hover:bg-transparent hover:opacity-100 [&>svg]:hover:stroke-current z-10";
 
-  const iconStyles = "w-8 h-8 sm:w-10 sm:h-10";
+  const iconStyles = "w-8 h-8 sm:w-8 sm:h-8";
 
   return (
     <>
