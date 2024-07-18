@@ -1,4 +1,3 @@
-@import "@radix-ui/themes/styles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,8 +17,6 @@
 }
 
 :root,
-.light,
-.light-theme,
 .radix-themes {
   --color-background: var(--accent-2);
 }
@@ -27,5 +24,5 @@
 .dark,
 .dark-theme,
 :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
-  --color-background: #111;
+  --color-background: var(--accent-1) !important;
 }
