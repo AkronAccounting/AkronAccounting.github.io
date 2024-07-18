@@ -2,16 +2,32 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Theme } from "@radix-ui/themes";
 import { useAppearance } from "@/contexts/appearance";
-import { Welcome, About, Contact, Services, Footer, ScrollToSection } from "@/components";
-import Navbar from "./components/Navbar";
+import {
+  Welcome,
+  Navbar,
+  About,
+  Contact,
+  Services,
+  Footer,
+  ScrollToSection,
+  Animator,
+} from "@/components";
 
 function MainContent() {
   return (
     <>
       <Welcome />
-      <About />
-      <Services />
-      <Contact />
+      <Animator>
+        <About />
+      </Animator>
+
+      <Animator>
+        <Services />
+      </Animator>
+
+      <Animator>
+        <Contact />
+      </Animator>
     </>
   );
 }

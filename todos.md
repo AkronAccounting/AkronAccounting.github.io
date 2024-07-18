@@ -10,7 +10,6 @@
 
 ## Medium Priority
 
-- [ ] When scrolling into view, the heading will type itself out
 
 ## Low Priority
 
@@ -18,6 +17,7 @@
 
 ## Completed
 
+- [x] When scrolling into view, there will be an animation
 - [x] Have a small ball at the bottom so that users will click and it will go down
 - [x] Styling
 - [x] Setup initial project structure
