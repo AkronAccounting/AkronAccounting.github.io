@@ -26,3 +26,8 @@
 :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
   --color-background: var(--accent-1) !important;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ruby-9) var(--ruby-4);
+}

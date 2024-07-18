@@ -1,4 +1,3 @@
-// import assert from "assert";
 import { createContext, useContext, useLayoutEffect, useState } from "react";
 
 type AppearanceContextType = {
@@ -32,11 +31,20 @@ export const AppearanceProvider = ({ children }: { children: React.ReactNode }) 
     return () => media.removeEventListener("change", mediaListener);
   }, []);
 
+  useLayoutEffect(() => {
+    const htmlElement = document.documentElement;
+    if (appearance === "dark") {
+      htmlElement.classList.add("dark");
+    } else {
+      htmlElement.classList.remove("dark");
+    }
+  }, [appearance]);
+
   function toggleAppearance() {
     setAppearance((current) => {
-      const appearance = current === "dark" ? "light" : "dark";
-      localStorage.setItem("appearance", appearance);
-      return appearance;
+      const newAppearance = current === "dark" ? "light" : "dark";
+      localStorage.setItem("appearance", newAppearance);
+      return newAppearance;
     });
   }
 
@@ -49,7 +57,6 @@ export const AppearanceProvider = ({ children }: { children: React.ReactNode }) 
 
 export const useAppearance = () => {
   const context = useContext(AppearanceContext);
-  // assert(context !== undefined, "AppearanceContext is undefined");
   if (context === undefined) {
     throw new Error("AppearanceContext is undefined");
   }
